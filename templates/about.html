@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block content %}
+<table class="table table-striped">
+    <tr>
+        <th>No.</th>
+        <th>Fruit</th>
+        <th>Animal</th>
+    </tr>
+    {% for index in range(data|length) %}
+    <tr>
+        <td>{{ data[index]["no"] }}</td>
+        <td>{{ data[index]["fruit"] }}</td>
+        <td>{{ data[index]["animal"] }}</td>
+    </tr>
+{% endfor %}
+</table>
+{% endblock %}
